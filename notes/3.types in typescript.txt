@@ -1,0 +1,42 @@
+TypeScript provides several built-in types that developers can use to define variables, parameters, return types, and other elements in their code. Here's an overview of some of the most commonly used TypeScript types:
+
+1.Primitive Types:
+number: Represents numeric values, including integers and floating-point numbers.
+string: Represents textual data enclosed in single quotes (') or double quotes (").
+boolean: Represents a logical value, either true or false.
+null and undefined: Represent absence of value. They are also types themselves.
+symbol: Represents unique identifiers, often used as object property keys.
+
+2.Object Types:
+object: Represents any JavaScript object. It's a type that includes arrays, functions, and objects created with constructors.
+{} (object literal): Represents an empty object.
+object[]: Represents an array of objects.
+Function: Represents a JavaScript function.
+
+
+3.Array Types:
+`Array : Represents an array of a specific type. For example, number[]represents an array of numbers, andstring[]` represents an array of strings.
+
+readonlyArray: Represents an immutable array, meaning its elements cannot be modified after initialization.
+
+
+4.Tuple Types:
+Tuple: Represents an array with a fixed number of elements, where each element may have a different type. For example, [string, number] represents a tuple with a string followed by a number.
+
+5.Union Types:
+Union: Represents a value that can be of multiple types. For example, string | number represents a value that can be either a string or a number.
+
+6.Intersection Types:
+Intersection: Represents a type formed by combining multiple types. For example, A & B represents a type that has all properties of type A and all properties of type B.
+
+7.Type Aliases:
+type: Allows developers to create custom type aliases to simplify complex type definitions. For example, type Point = { x: number, y: number } defines a type alias for a point with x and y coordinates.
+
+
+8.Enums:
+enum: Represents a set of named constants. For example, enum Color { Red, Green, Blue } defines an enumeration type for colors.
+
+9.Any Type:
+any: Represents any type, allowing values to be dynamically typed. Its use is generally discouraged because it bypasses TypeScript's static type checking.
+
+

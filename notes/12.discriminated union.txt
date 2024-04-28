@@ -1,0 +1,60 @@
+A discriminated union, also known as a tagged union or algebraic data type, is a TypeScript pattern for modeling types that may have different variants, but each variant has a distinct discriminator property that allows TypeScript to narrow down the union to one of its constituent types based on that property.
+
+Here's an example to illustrate discriminated unions:
+
+interface Square {
+    kind: "square";
+    sideLength: number;
+}
+
+interface Rectangle {
+    kind: "rectangle";
+    width: number;
+    height: number;
+}
+
+interface Circle {
+    kind: "circle";
+    radius: number;
+}
+
+type Shape = Square | Rectangle | Circle;
+
+function area(shape: Shape): number {
+    switch (shape.kind) {
+        case "square":
+            return shape.sideLength ** 2;
+        case "rectangle":
+            return shape.width * shape.height;
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+        default:
+            // TypeScript ensures all cases are handled
+            throw new Error("Unknown shape: " + shape);
+    }
+}
+
+const mySquare: Square = { kind: "square", sideLength: 4 };
+const myRectangle: Rectangle = { kind: "rectangle", width: 3, height: 5 };
+const myCircle: Circle = { kind: "circle", radius: 2 };
+
+console.log(area(mySquare));    // Output: 16
+console.log(area(myRectangle)); // Output: 15
+console.log(area(myCircle));    // Output: ~12.57
+
+
+
+In this example:
+
+We have three interfaces (Square, Rectangle, and Circle) representing different shapes. Each interface includes a kind property with a literal type indicating the type of shape.
+We define a union type Shape that includes all three shape interfaces.
+The area function takes a Shape as an argument and calculates the area based on the shape's type using a switch statement. TypeScript is able to narrow down the type of shape within each case block based on the kind property.
+By using the kind property as a discriminator, TypeScript ensures that all cases are handled within the switch statement, providing type safety.
+Discriminated unions are useful for creating flexible and type-safe APIs where TypeScript can infer specific types within unions based on certain discriminators, leading to better type checking and code maintenance. They are particularly helpful when dealing with complex data structures or scenarios where multiple variants need to be represented by a single type.
+
+
+
+
+
+
+

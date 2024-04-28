@@ -1,0 +1,21 @@
+
+In TypeScript, abstract classes are similar to abstract classes in other object-oriented languages like Java or C#. They are classes that cannot be instantiated directly; instead, they are meant to be extended by other classes. Abstract classes can contain abstract methods, which are methods declared in the abstract class but not implemented. Subclasses that extend an abstract class must provide implementations for all the abstract methods, otherwise, they themselves must be declared as abstract.
+
+example 
+
+abstract class Animal {
+    abstract makeSound(): void;
+    move(): void {
+        console.log("roaming the earth...");
+    }
+}
+
+class Dog extends Animal {
+    makeSound(): void {
+        console.log("Woof! Woof!");
+    }
+}
+
+const myDog = new Dog();
+myDog.makeSound(); // Output: Woof! Woof!
+myDog.move();      // Output: roaming the earth...

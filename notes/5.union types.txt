@@ -1,0 +1,10 @@
+
+In TypeScript, union types allow you to specify that a value can be of multiple types. This means that a variable, parameter, or property can accept values of different types. Union types are denoted by the vertical bar (|) between the type names.
+
+Here's a basic example of a union type:
+
+let myVariable: string | number;
+
+myVariable = "hello"; // Valid
+myVariable = 123;      // Valid
+// myVariable = true;  // Error: Type 'boolean' is not assignable to type 'string | number'

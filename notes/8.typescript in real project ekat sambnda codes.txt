@@ -1,0 +1,12 @@
+1.typescript unath ara nodemon walal wage save krna dewal track krla rerun krnna puluwan , ekat one krna command eka awilla:
+
+	"tsc -w"
+
+2.real project ekat sambnda web pages wala automatic refreshing walt:
+
+	"npm install lite-server" //meka install kalama hari automatically web page content typescript files saha javascript files save wenwakta refresh wenwa
+		
+	meka install krla iwar wela package.json eke scripts walal danna one start kiyna key eka yatathe lite-server kiyla, eta passe apita ara nbpm run dev denwa wage npm start dunnama automa browser eke open wela refresh wenna one welwl walt automa refresh wewi ynwa
+
+
+3.	

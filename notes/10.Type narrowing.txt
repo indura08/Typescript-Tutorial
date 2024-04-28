@@ -1,0 +1,30 @@
+Type narrowing in TypeScript refers to the process of refining the type of a variable within a certain code block based on certain conditions. This allows you to work with more specific types within different branches of your code, improving type safety and enabling the TypeScript compiler to understand your intentions more accurately.
+
+One common scenario where type narrowing is used is with conditional statements (such as if, switch, or ternary operators). Here's a simple example:
+
+function displayType(value: string | number) {
+    if (typeof value === "string") {
+        console.log("The value is a string:", value.toUpperCase());
+    } else {
+        console.log("The value is a number:", value.toFixed(2));
+    }
+}
+
+displayType("hello"); // Output: The value is a string: HELLO
+displayType(3.14159); // Output: The value is a number: 3.14
+
+In this example:
+
+The value parameter is of type string | number, meaning it can be either a string or a number.
+Inside the if statement, TypeScript narrows down the type of value to string because typeof value === "string". Therefore, within that block, TypeScript knows that value is a string, and it allows us to call string-specific methods like toUpperCase().
+Similarly, within the else block, TypeScript knows that value is a number because it's not a string. Therefore, it allows us to call number-specific methods like toFixed().
+
+ypeScript can perform type narrowing based on various conditions, including:
+
+typeof checks
+instanceof checks
+Equality checks (=== or !==)
+Property existence checks
+User-defined type guards
+Type narrowing helps TypeScript to understand the specific types of variables at different points in your code, enabling better type inference and more accurate type checking. This can lead to fewer bugs and better code maintenance.
+

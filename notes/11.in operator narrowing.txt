@@ -1,0 +1,45 @@
+in operato narrowing kiynne mokka hari property ekk e adlala object eke thiynwad kiyla balala e object ekat adla class eka ho intefcae eka nauwa return kirima siddia kirimai
+
+
+In TypeScript, the in operator narrowing refers to a mechanism where TypeScript narrows the type of an object based on whether a property exists within that object. This is particularly useful when working with objects with union types or when dealing with dynamic property access.
+
+interface Circle {
+    radius: number;
+}
+
+interface Square {
+    sideLength: number;
+}
+
+function calculateArea(shape: Circle | Square): number {
+    if ("radius" in shape) {
+        // TypeScript knows 'shape' has a 'radius' property here
+        return Math.PI * shape.radius ** 2;
+    } else {
+        // TypeScript knows 'shape' has a 'sideLength' property here
+        return shape.sideLength ** 2;
+    }
+}
+
+const myCircle: Circle = { radius: 5 };
+const mySquare: Square = { sideLength: 4 };
+
+console.log(calculateArea(myCircle)); // Output: ~78.54
+console.log(calculateArea(mySquare)); // Output: 16
+
+
+In this example:
+
+The calculateArea function takes an argument shape of type Circle | Square, meaning it can be either a Circle or a Square.
+Inside the function, TypeScript uses the in operator to check if the radius property exists in shape. If it does, TypeScript narrows down the type of shape to Circle, allowing the calculation of the circle's area using shape.radius.
+If the radius property doesn't exist, TypeScript knows that shape must be a Square, and it narrows down the type to Square, allowing the calculation of the square's area using shape.sideLength.
+
+
+The in operator is particularly useful when dealing with objects that have optional properties or when handling objects with union types. It allows TypeScript to infer more specific types within different branches of your code, leading to better type safety and more accurate type checking.
+
+
+
+
+
+
+

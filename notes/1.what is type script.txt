@@ -1,0 +1,16 @@
+TypeScript is a statically typed superset of JavaScript that adds optional static typing and other features to the language. It's developed and maintained by Microsoft. TypeScript code is transcompiled to plain JavaScript, meaning it can be run on any JavaScript engine, making it highly compatible with existing JavaScript frameworks and libraries.
+
+Here are some key features of TypeScript:
+
+1.Static Typing: TypeScript allows developers to define types for variables, function parameters, return values, and more. This helps catch type-related errors during development and provides 
+
+2.Type Inference: TypeScript can often infer types based on the context, which reduces the need for explicit type annotations and makes code cleaner.
+
+3.Interfaces: TypeScript supports interfaces, which define the structure of objects. This is particularly useful for defining contracts within your codebase.
+
+4.Enums: Enums allow developers to define a set of named constants, making code more readable and maintainable.
+
+5.Generics: TypeScript supports generics, allowing functions and classes to work with any data type while still maintaining type safety.
+
+6.Access to ES6+ Features: TypeScript supports modern JavaScript features like arrow functions, classes, async/await, and modules.
+

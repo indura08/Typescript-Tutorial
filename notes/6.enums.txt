@@ -1,0 +1,20 @@
+In TypeScript, enums (short for enumerations) are a data type that allows you to define a set of named constants. Enums provide a way to give more friendly names to sets of numeric values.
+
+Here's a basic example of an enum:
+
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right
+}
+
+
+In this example, Direction is an enum with four members: Up, Down, Left, and Right. By default, each member is assigned a numeric value starting from 0 and incrementing by 1 for each subsequent member. So, in this case, Up is assigned the value 0, Down is assigned 1, Left is assigned 2, and Right is assigned 3.
+
+enum Direction {
+  Up = 1,
+  Down = 2,
+  Left = 3,
+  Right = 4
+}

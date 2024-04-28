@@ -1,0 +1,26 @@
+
+In TypeScript, an interface is a way to define the shape or structure of an object. It allows you to specify the properties and their types that an object should have. Interfaces are used to enforce a contract between different parts of your code, ensuring that objects adhere to a specific structure.
+
+
+example: 
+
+interface Person {
+  name: string;
+  age: number;
+}
+
+
+In this example, the Person interface specifies that any object that claims to implement this interface must have a name property of type string and an age property of type number. For example, an object that conforms to the Person interface might look like this:
+
+const person: Person = {
+  name: "Alice",
+  age: 30
+};
+
+
+Interfaces can also include optional properties, readonly properties, methods, and function types. Here's an example with optional properties:
+
+interface Rectangle {
+  width: number;
+  height?: number; // Optional property
+}

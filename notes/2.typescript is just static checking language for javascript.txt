@@ -1,0 +1,12 @@
+In TypeScript, static checking refers to the process of analyzing code for potential errors and issues at compile time, before the code is executed. This is achieved through the use of static types, which allow the TypeScript compiler to infer and enforce type constraints throughout the codebase.
+
+Here's how static checking works in TypeScript:
+
+Type Inference: TypeScript's compiler analyzes the code to infer the types of variables, parameters, and expressions based on their usage. This helps catch type-related errors early in the development process.
+Type Annotations: Developers can optionally provide explicit type annotations for variables, function parameters, return types, and other elements in the code. These annotations serve as documentation and help the compiler verify that the code adheres to the specified types.
+Type Compatibility Checking: TypeScript checks the compatibility of types when assigning values, passing arguments to functions, or returning values from functions. It ensures that the assigned values or arguments match the expected types, preventing type mismatch errors at runtime.
+Type Checking Errors: If the compiler detects any type errors or inconsistencies in the code, it raises compile-time errors or warnings, indicating the location and nature of the issues. This allows developers to address the errors before running the code.
+By performing static checking, TypeScript helps improve code quality, reliability, and maintainability. It reduces the likelihood of runtime errors caused by type mismatches and provides developers with early feedback on potential issues, leading to more robust and bug-free software.
+
+
+**Typescript is a development tool please keep that in mind, Your typescript project still runs Javascript, it is pure, 100% javascript code 
